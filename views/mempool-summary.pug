@@ -69,7 +69,11 @@ block content
 				
 				canvas(id="mempoolBarChart", height="100", class="mb-4")
 
-				script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js")
+				if (config.useCdn)
+					script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js")
+				else
+					script(src="/libs/Chart.js/2.7.2/Chart.bundle.min.js")
+
 
 				script var feeBucketLabels = [];
 				script var bgColors = [];
